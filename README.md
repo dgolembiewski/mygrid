@@ -1,27 +1,15 @@
-# Mygrid
+This repo is an introduction to using a grid in Angular and will allow you to familiarize yourself with the groundwork for using the ag-grid, a 508 compliant grid for manipulating data.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+This initial workup has been kept to a minimum to ensure ease of use and facilitating the users' grasp of the basic concepts of how the grid can be used.  For a more realistic experience an external api is used.
 
-## Development server
+The overall display is responsive down to tablet sized displays.   Once you are familiar with the workings of the resizing take time to test your skills on ensuring the desired alignment is maintained after resizing.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Reordering the column display takes place by clicking on the column header.
 
-## Code scaffolding
+Filtering takes place by clicking on the hamburger in the right corner of the column header.  As you begin typing the filtering (and/or) will be activated.
+Removing any typed characters will return the display back to its original state.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Multiple selections can be effected by clicking on the checkbox on the left side of the screen.  Clicking on the <Get Selected Rows> at the bottom left will  display the information of the selected rows.   This particular function can be useful for passing data back to the server when needed or to an external application.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

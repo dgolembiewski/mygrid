@@ -22,8 +22,10 @@ import { ToastrModule } from 'ngx-toastr';
     AgGridModule.withComponents([]),
     HttpClientModule,
     CommonModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    // required animations module
+    BrowserAnimationsModule, 
+    // ToastrModule added
+    ToastrModule.forRoot() 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   
     title = 'Comments Testing From An External API';
 
+    // define the grid headers   
     columnDefs = [
         {headerName: 'Post ID', field: 'postId', checkboxSelection: true },
         {headerName: 'ID', field: 'id' },
@@ -19,18 +20,20 @@ export class AppComponent implements OnInit {
         {headerName: 'Email', field: 'email'},
         {headerName: 'Comments', field: 'body'},        
     ];
-
+    // establish the return data type
     rowData: any;
-
 
     constructor(private http: HttpClient) {
     
     }
     
     ngOnInit() {
+        // the external api call
          this.rowData = this.http.get('https://jsonplaceholder.typicode.com/comments');
     }
 
+    // showing the users the data in the selected rows
+    //  a more desireable approach will be to use a toast instead of an alert
     getSelectedRows() {
       const selectedNodes = this.agGrid.api.getSelectedNodes();
       const selectedData = selectedNodes.map( node => node.data );
