@@ -16,8 +16,11 @@
   [enableFilter]="true"
   [rowData]="rowData | async"
   rowSelection="multiple"
+  [rowDragManaged]="true"
+  [enableColResize]="true"
+  [defaultColDef]="defaultColDef"
   >
-</ag-grid-angular>
+  </ag-grid-angular>
 </div>
 <br />
 <button (click)="getSelectedRows()">Get Selected Rows</button>

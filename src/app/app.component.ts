@@ -11,12 +11,13 @@ export class AppComponent implements OnInit {
     @ViewChild('agGrid') agGrid: AgGridNg2;
   
     title = 'Comments Testing From An External API';
+    defaultColDef;
 
     // define the grid headers   
     columnDefs = [
         {headerName: 'Post ID', field: 'postId', checkboxSelection: true },
-        {headerName: 'ID', field: 'id' },
-        {headerName: 'User', field: 'name'},
+        {headerName: 'ID', field: 'id', rowDrag: true },
+        {headerName: 'User', field: 'name', rowDrag: true},
         {headerName: 'Email', field: 'email'},
         {headerName: 'Comments', field: 'body'},        
     ];
@@ -30,7 +31,8 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         // the external api call
          this.rowData = this.http.get('https://jsonplaceholder.typicode.com/comments');
-    }
+         this.defaultColDef = { editable: true };
+        }
 
     // showing the users the data in the selected rows
     //  a more desireable approach will be to use a toast instead of an alert
