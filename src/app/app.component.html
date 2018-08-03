@@ -1,9 +1,27 @@
+<div id="bg"></div>
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+<header>
+  <a href="#">PIT On-Line Help</a>
+</header>
+
+<main>
+<section id="card">
+  <ul>
+    <li>
+      <span></span>
+      <strong>How may we help you?</strong>
+    </li>
+    <li>
+      <span></span>
+      <strong>Utilize the icons for drag and drop.</strong>
+    </li>
+    <li>
+      <span></span>
+      <strong>Take advantage of the in-line editing.</strong>
+    </li>
+  </ul>
+</section>
+
   <!-- note filtering and sorting are enabled-->
   <!-- async pipe added to allow for data display-->
   <div class="box">
@@ -22,7 +40,10 @@
   >
   </ag-grid-angular>
 </div>
-<br />
+
+
 <button (click)="getSelectedRows()">Get Selected Rows</button>
+
+</main>
 
 

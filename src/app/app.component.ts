@@ -10,7 +10,7 @@ import { AgGridNg2 } from 'ag-grid-angular';
 export class AppComponent implements OnInit {
     @ViewChild('agGrid') agGrid: AgGridNg2;
   
-    title = 'Comments Testing From An External API';
+    title = 'an external API';
     defaultColDef;
 
     // define the grid headers   
@@ -25,9 +25,8 @@ export class AppComponent implements OnInit {
     rowData: any;
 
     constructor(private http: HttpClient) {
-    
+
     }
-    
     ngOnInit() {
         // the external api call
          this.rowData = this.http.get('https://jsonplaceholder.typicode.com/comments');
