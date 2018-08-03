@@ -17,3 +17,5 @@ Multiple selections can be effected by clicking on the checkbox on the left side
 
  Inline editing is enabled with a double click
 
+SASS features have been added.  Take particular note of the use of variables, functions and mixins.  The styling is broken a bit for one of the components and your task will be to fix it.
+
